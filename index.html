@@ -1,125 +1,49 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>Frozen Flask Server</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            font-family: system-ui;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
         }
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 600px;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .status {
+        .container { text-align: center; padding: 40px; }
+        h1 { font-size: 3rem; margin-bottom: 20px; color: #00ff88; }
+        .card {
             background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 16px;
+            padding: 30px;
             margin: 20px 0;
         }
-        .status-dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            background: #00ff88;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(90deg, #00d4ff, #7b2cbf);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            border: none;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
-        }
-        .counter {
-            font-size: 4rem;
-            font-weight: bold;
-            color: #00ff88;
-            margin: 20px 0;
-        }
+        .status { color: #00ff88; font-size: 1.5rem; }
+        a { color: #00d4ff; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Site is Live!</h1>
-        <p>Your GitHub Pages static site is up and running 24/7!</p>
-        
-        <div class="status">
-            <span class="status-dot"></span>
-            <strong>Online 24/7</strong>
-            <p style="margin-top: 10px; font-size: 0.9rem;">Static hosting via GitHub Pages</p>
+        <h1>Frozen Flask "Server"</h1>
+        <div class="card">
+            <p class="status">24/7 Hosting via GitHub Pages</p>
+            <p style="margin-top: 15px; opacity: 0.8;">
+                Flask app frozen to static files.<br>
+                No server needed. Free hosting forever.
+            </p>
         </div>
-
-        <div class="status">
-            <p>JavaScript Counter Demo</p>
-            <div class="counter" id="counter">0</div>
-            <button class="btn" onclick="increment()">Click Me!</button>
-            <button class="btn" onclick="reset()">Reset</button>
+        <div class="card">
+            <h3>Pages Generated:</h3>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a> |
+                <a href="/about.html">About</a> |
+                <a href="/api-status.html">API Status</a>
+            </p>
         </div>
-        
-        <p style="margin-top: 30px; font-size: 0.9rem;">
-            This is a static site - HTML, CSS, and JavaScript only.<br>
-            No server needed, hosted free on GitHub!
-        </p>
     </div>
-
-    <script>
-        let count = 0;
-        const counterEl = document.getElementById('counter');
-        
-        function increment() {
-            count++;
-            counterEl.textContent = count;
-            counterEl.style.transform = 'scale(1.2)';
-            setTimeout(() => counterEl.style.transform = 'scale(1)', 100);
-        }
-        
-        function reset() {
-            count = 0;
-            counterEl.textContent = count;
-        }
-    </script>
 </body>
 </html>
